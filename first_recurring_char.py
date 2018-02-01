@@ -8,11 +8,11 @@ input_str = raw_input("Enter String :- ")
 
 def first_recurring_char(input_str):
 
-    data = {}
+    counts = {}
     for char in input_str:
-        if char in data:
+        if char in counts:
            return char
-        data[char] = 1
+        counts[char] = 1
 
 
 print first_recurring_char(input_str)
