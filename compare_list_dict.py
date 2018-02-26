@@ -36,7 +36,7 @@ def timeit(f):
 
 @timeit
 def create_datasets():
-    numbers_of_entries = 1000000
+    numbers_of_entries = 10000000
     f = open(data_sets_file,"w")
     for i in range(numbers_of_entries):
        f.write(random.choice(countries)+"\n")
