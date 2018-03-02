@@ -18,7 +18,20 @@ def flip_it(matrix):
         i = i + 1
     return matrix
 
+
+def flip_it_2(matrix):
+   if len(matrix) <= 1:
+     return matrix
+   x = len(matrix) - 1
+   i = 0
+   while x > 0:
+     matrix[x],matrix[i] = matrix[i],matrix[x]
+     x -= 1 
+     i += 1
+   return matrix
+
+
 matrix = [[1,2,3],[4,5,6],[7,8,9]]
 
 print "Before", matrix
-print flip_it(matrix)
+print flip_it_2(matrix)
