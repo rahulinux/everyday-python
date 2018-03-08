@@ -6,19 +6,22 @@ class Stack:
       self.items = []
 
    def isEmpty(self):
-      return self.items == []
+      if self.items == []:
+         return True
+      return False
 
+   # Last In First Out
    def push(self,item):
-      self.items.append(item)
+      self.items.insert(0,item)
 
    def pop(self):
-      self.items.pop()
+      self.items.pop(0)
 
    def size(self):
       return len(self.items)
 
    def peek(self):
-      return self.items[len(self.items)-1]
+      return self.items[0]
 
    def display(self):
       return self.items
@@ -32,6 +35,22 @@ s.push(2)
 print s.display()
 s.pop()
 print s.display()
-s.push(2222)
+s.push(3)
+s.push(4)
 print s.peek()
 print s.size()
+print s.display()
+
+ss = Stack()
+
+ss.push('x')
+ss.push('y')
+ss.push('z')
+
+print ss.display()
+while not ss.isEmpty():
+  ss.pop()
+  ss.pop()
+
+
+print ss.display()
